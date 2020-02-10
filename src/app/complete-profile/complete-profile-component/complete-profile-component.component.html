@@ -1,0 +1,392 @@
+<div class="page-content bg-white login-style2"
+    style="background-image:url(assets/images/background/bg6.jpg); background-size: cover;">
+    <div class="section-full">
+        <!-- Login Page -->
+        <div class="container">
+            <div class="row">
+                <div class="col-md-7 rw-pr-par">
+                    <div class="login-2 submit-resume p-a30 seth animated bounceInLeft">
+                        <!-- <div class="progress-main">
+                            <div class="progress-child">
+                                <span class="step-icon">1</span>
+                                <span class="step-text">Step 1</span>
+                            </div>
+                            <div class="progress-child">
+                                <span class="step-icon">2</span>
+                                <span class="step-text">Step 2</span>
+                            </div>
+                            <div class="progress-child">
+                                <span class="step-icon">3</span>
+                                <span class="step-text">Step 3</span>
+                            </div>
+                            <div class="progress-child">
+                                <span class="step-icon">4</span>
+                                <span class="step-text">Step 4</span>
+                            </div>
+                        </div> -->
+                        <div class="tab-content nav">
+                            <form id="login" class="tab-pane active col-12 p-a0" [ngSwitch]="wizard">
+                                <h3 id="headingText">{{wizardHeading}}</h3>
+                                <div *ngSwitchDefault>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>First Name*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="First Name" class="form-control"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>Last Name *</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Last Name" required=""
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label>Description*</label>
+                                            <div class="input-group">
+                                                <textarea placeholder="Enter a headline or a brief description of your career highlights.
+(Please limit to 100 characters)" class="form-control" required="" rows="4"></textarea>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>Country*</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">Select Country</option>
+                                                    <option value="India">India</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>Zip *</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Zip" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>City *</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="City" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>State *</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="State" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button class="site-button float-right"
+                                            (click)="profileCreate('work-exp-form')">Next</button>
+                                    </div>
+                                </div>
+
+                                <div *ngSwitchCase="'work-exp-form'">
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>Job Title*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Job Title" class="form-control"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>Job Type *</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">Select Job Type</option>
+                                                    <option value="India">Dire Hire</option>
+                                                    <option value="India">Contract / Temporary</option>
+                                                    <option value="India">Part-Time Gig</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>Employer*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Employer" required=""
+                                                    class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>Staffing Company ( If Applicable )*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Staffing Company ( If Applicable )"
+                                                    required="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+
+                                        <div class="col-md-12">
+                                            <!-- <label>Zip *</label> -->
+                                            <div>
+                                                <input type="checkbox"> I am currently working here
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>From Date *</label>
+                                            <div class="input-group">
+                                                <input type="date" placeholder="City" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>To Date *</label>
+                                            <div class="input-group">
+                                                <input type="date" placeholder="State" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button (click)="profileCreate('account-info-form')"
+                                            class="site-button float-left">Back</button>
+                                        <button (click)="profileCreate('skill-form')"
+                                            class="site-button float-right">Next</button>
+                                    </div>
+                                </div>
+
+                                <div *ngSwitchCase="'skill-form'">
+                                    <div class="row">
+                                        <div class="col-md-4 form-group">
+                                            <label>Skiils*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Skiils" class="form-control"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Experience *</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">
+                                                        < 3 Years</option> <option value="2019">3-5 Years
+                                                    </option>
+                                                    <option value="2018">5-7 Years</option>
+                                                    <option value="2017">7-10 Years</option>
+                                                    <option value="2016">> 10 Years</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Last Used*</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 form-group">
+                                            <label>Skiils*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Skiils" class="form-control"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Experience *</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">
+                                                        < 3 Years</option> <option value="2019">3-5 Years
+                                                    </option>
+                                                    <option value="2018">5-7 Years</option>
+                                                    <option value="2017">7-10 Years</option>
+                                                    <option value="2016">> 10 Years</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Last Used*</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 form-group">
+                                            <label>Skiils*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Skiils" class="form-control"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Experience *</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">
+                                                        < 3 Years</option> <option value="2019">3-5 Years
+                                                    </option>
+                                                    <option value="2018">5-7 Years</option>
+                                                    <option value="2017">7-10 Years</option>
+                                                    <option value="2016">> 10 Years</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Last Used*</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-4 form-group">
+                                            <label>Skiils*</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Skiils" class="form-control"
+                                                    required="">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Experience *</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">
+                                                        < 3 Years</option> <option value="2019">3-5 Years
+                                                    </option>
+                                                    <option value="2018">5-7 Years</option>
+                                                    <option value="2017">7-10 Years</option>
+                                                    <option value="2016">> 10 Years</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="col-md-4 form-group">
+                                            <label>Last Used*</label>
+                                            <div class="input-group">
+                                                <select class="form-control">
+                                                    <option value="">--Select--</option>
+                                                    <option value="2020">2020</option>
+                                                    <option value="2019">2019</option>
+                                                    <option value="2018">2018</option>
+                                                    <option value="2017">2017</option>
+                                                    <option value="2016">2016</option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button (click)="profileCreate('work-exp-form')"
+                                            class="site-button float-left">Back</button>
+                                        <button (click)="profileCreate('ideal-job-form')"
+                                            class="site-button float-right">Next</button>
+                                    </div>
+                                </div>
+
+
+                                <div *ngSwitchCase="'ideal-job-form'">
+                                    <div class="row">
+                                        <div class="col-md-12">
+                                            <!-- <label>Zip *</label> -->
+                                            <div>
+                                                <input type="checkbox"> I am currently Available
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group" style="margin-top: 10px;">
+                                            <label>Employment Types *</label>
+                                            <div class="emp-type-check">
+                                                <div class="input-group">
+                                                    <input type="checkbox"><span>Direct Hire</span>
+                                                </div>
+                                                <div class="input-group">
+                                                    <input type="checkbox"> <span>Contract / Temp</span>
+                                                </div>
+                                                <div class="input-group">
+                                                    <input type="checkbox"> <span>Part-time / Gig</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-12 form-group">
+                                            <label>Available *</label>
+                                            <div class="input-group">
+                                                <input type="date" placeholder="Available" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-md-6 form-group">
+                                            <label>Desired Pay *</label>
+                                            <div class="input-group">
+                                                <input type="text" placeholder="Available" required="" class="form-control">
+                                            </div>
+                                        </div>
+                                        <div class="col-md-6 form-group">
+                                            <label>Annually *</label>
+                                            <select class="form-control">
+                                                <option value="">Select</option>
+                                                <option value="Annually">Annually</option>
+                                                <option value="Hourly">Hourly</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="text-center">
+                                        <button (click)="profileCreate('skill-form')"
+                                            class="site-button float-left">Back</button>
+                                        <button routerLink="/Dashboard" routerLinkActive="active"
+                                            class="site-button float-right">Submit</button>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Login Page END -->
+    </div>
+    <footer class="login-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-12 text-center">
+                    <span class="float-left">© Copyright by <i class="fa fa-heart m-lr5 text-red heart"></i>
+                        <a href="javascript:void(0);">DexignZone </a> </span>
+                    <span class="float-right">
+                        All rights reserved.
+                    </span>
+                </div>
+            </div>
+        </div>
+    </footer>
+</div>

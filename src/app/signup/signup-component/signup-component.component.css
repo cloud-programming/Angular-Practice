@@ -1,0 +1,24 @@
+.site-button
+{
+    margin-top: 15px !important;
+}
+@media (min-width: 1200px)
+{
+    .container
+    {
+        max-width: 1170px;
+    }
+}
+.logo
+{
+    font-weight: 700 !important;
+    font-size: 50px !important;
+}
+.login-style2 .logo {
+    margin-bottom: 7px !important;
+}
+.site-button
+{
+    color: white !important;
+    background-color: #2e55fa !important;
+}
